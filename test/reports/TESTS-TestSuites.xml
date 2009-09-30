@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="scofield.local" id="0" name="BookTests" package="com.lucastex.featurable" tests="2" time="0.087" timestamp="2009-09-30T01:05:33">
+      <properties />
+
+      <testcase classname="com.lucastex.featurable.BookTests" name="testStaticPropertyExistance" time="0.0020" />
+
+      <testcase classname="com.lucastex.featurable.BookTests" name="testStaticPropertyValue" time="0.0" />
+
+      <system-out><![CDATA[--Output from testStaticPropertyExistance--
+--Output from testStaticPropertyValue--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testStaticPropertyExistance--
+--Output from testStaticPropertyValue--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="scofield.local" id="1" name="DateRangeCreatorTests" package="com.lucastex.featurable" tests="3" time="0.053" timestamp="2009-09-30T01:05:33">
+      <properties />
+
+      <testcase classname="com.lucastex.featurable.DateRangeCreatorTests" name="testDays" time="0.044" />
+
+      <testcase classname="com.lucastex.featurable.DateRangeCreatorTests" name="testMonths" time="0.0010" />
+
+      <testcase classname="com.lucastex.featurable.DateRangeCreatorTests" name="testYears" time="0.0010" />
+
+      <system-out><![CDATA[--Output from testDays--
+--Output from testMonths--
+--Output from testYears--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testDays--
+--Output from testMonths--
+--Output from testYears--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="scofield.local" id="2" name="FeaturedTests" package="com.lucastex.featurable" tests="4" time="1.047" timestamp="2009-09-30T01:05:33">
+      <properties />
+
+      <testcase classname="com.lucastex.featurable.FeaturedTests" name="testFeature" time="0.827" />
+
+      <testcase classname="com.lucastex.featurable.FeaturedTests" name="testUnfeature" time="0.105" />
+
+      <testcase classname="com.lucastex.featurable.FeaturedTests" name="testFeaturedProperty" time="0.0090" />
+
+      <testcase classname="com.lucastex.featurable.FeaturedTests" name="testListFeatured" time="0.081" />
+
+      <system-out><![CDATA[--Output from testFeature--
+--Output from testUnfeature--
+--Output from testFeaturedProperty--
+--Output from testListFeatured--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testFeature--
+--Output from testUnfeature--
+--Output from testFeaturedProperty--
+--Output from testListFeatured--
+]]></system-err>
+
+  </testsuite>
+</testsuites>

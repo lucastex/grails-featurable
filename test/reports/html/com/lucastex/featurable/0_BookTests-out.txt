@@ -1,0 +1,3 @@
+--Output from testStaticPropertyExistance--
+--Output from testStaticPropertyValue--
+

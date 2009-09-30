@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="scofield.local" name="com.lucastex.featurable.DateRangeCreatorTests" tests="3" time="0.053" timestamp="2009-09-30T01:05:33">
+  <properties />
+  <testcase classname="com.lucastex.featurable.DateRangeCreatorTests" name="testDays" time="0.044" />
+  <testcase classname="com.lucastex.featurable.DateRangeCreatorTests" name="testMonths" time="0.0010" />
+  <testcase classname="com.lucastex.featurable.DateRangeCreatorTests" name="testYears" time="0.0010" />
+  <system-out><![CDATA[--Output from testDays--
+--Output from testMonths--
+--Output from testYears--
+]]></system-out>
+  <system-err><![CDATA[--Output from testDays--
+--Output from testMonths--
+--Output from testYears--
+]]></system-err>
+</testsuite>

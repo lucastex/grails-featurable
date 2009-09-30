@@ -1,0 +1,13 @@
+Testsuite: com.lucastex.featurable.BookTests
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.087 sec
+------------- Standard Output ---------------
+--Output from testStaticPropertyExistance--
+--Output from testStaticPropertyValue--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testStaticPropertyExistance--
+--Output from testStaticPropertyValue--
+------------- ---------------- ---------------
+
+Testcase: testStaticPropertyExistance took 0.002 sec
+Testcase: testStaticPropertyValue took 0 sec

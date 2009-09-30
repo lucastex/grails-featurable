@@ -1,0 +1,19 @@
+Testsuite: com.lucastex.featurable.FeaturedTests
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 1.047 sec
+------------- Standard Output ---------------
+--Output from testFeature--
+--Output from testUnfeature--
+--Output from testFeaturedProperty--
+--Output from testListFeatured--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testFeature--
+--Output from testUnfeature--
+--Output from testFeaturedProperty--
+--Output from testListFeatured--
+------------- ---------------- ---------------
+
+Testcase: testFeature took 0.827 sec
+Testcase: testUnfeature took 0.105 sec
+Testcase: testFeaturedProperty took 0.009 sec
+Testcase: testListFeatured took 0.081 sec

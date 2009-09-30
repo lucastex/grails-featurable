@@ -1,0 +1,16 @@
+<plugin name='featurable' version='0.1' grailsVersion='1.1.1 &gt; *'>
+  <author>Lucas Frare Teixeira</author>
+  <authorEmail>lucastex@gmail.com</authorEmail>
+  <title>Grails Featurable Plugin</title>
+  <description>Add the 'featurable' behavior to domain classes.</description>
+  <documentation>http://grails.org/plugin/featurable</documentation>
+  <resources>
+    <resource>DataSource</resource>
+    <resource>UrlMappings</resource>
+    <resource>com.lucastex.featurable.Book</resource>
+    <resource>com.lucastex.featurable.Featured</resource>
+  </resources>
+  <dependencies>
+    <plugin name='hibernate' version='1.1 &gt; *' />
+  </dependencies>
+</plugin>

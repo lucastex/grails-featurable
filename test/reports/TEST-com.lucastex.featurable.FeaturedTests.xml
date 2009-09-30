@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="scofield.local" name="com.lucastex.featurable.FeaturedTests" tests="4" time="1.047" timestamp="2009-09-30T01:05:33">
+  <properties />
+  <testcase classname="com.lucastex.featurable.FeaturedTests" name="testFeature" time="0.827" />
+  <testcase classname="com.lucastex.featurable.FeaturedTests" name="testUnfeature" time="0.105" />
+  <testcase classname="com.lucastex.featurable.FeaturedTests" name="testFeaturedProperty" time="0.0090" />
+  <testcase classname="com.lucastex.featurable.FeaturedTests" name="testListFeatured" time="0.081" />
+  <system-out><![CDATA[--Output from testFeature--
+--Output from testUnfeature--
+--Output from testFeaturedProperty--
+--Output from testListFeatured--
+]]></system-out>
+  <system-err><![CDATA[--Output from testFeature--
+--Output from testUnfeature--
+--Output from testFeaturedProperty--
+--Output from testListFeatured--
+]]></system-err>
+</testsuite>
