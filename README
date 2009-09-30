@@ -1,34 +1,40 @@
 Grails Featurable Plugin
 ---------------------------
 
-This plugin is inspired in the act_as_featurable rails plugin (http://github.com/ccjr/acts_as_featurable).
-It allows you to 'feature' your domain class to promote it somehow. The domain class will be featured for how long you define (or 30 days by default). For example, you can use this to mark some 'hot items' that you are selling or some featured books in your library.
+This plugin is inspired by the act_as_featurable rails plugin (http://github.com/ccjr/acts_as_featurable).
+It allows you to 'feature' your domain class to promote it somehow. The domain class will be featured for as long as you 
+define (30 days by default). For example, you can use this to mark some items as 'hot' that you may be selling or some 
+featured books in your library.
 
 Installing the plugin
 ---------------------------
 
-Just type 'grails install-plugin featurable'
+Type 'grails install-plugin featurable'
 
 Using the plugin
 ---------------------------
 
-Of course, you'll feature your domain classes, so you need to tell the plugin which domain classes will be featured. You'll have to do this using the static featurable property:
+To define which domain classes will support the featurable ability, you will have to use the static featurable property:
 
 class Book {
-	
-	static featurable = true
-	
-	String title
-	String isbn
+  
+  static featurable = true
+  
+  String title
+  String isbn
 }
 
-Doing this, the plugin will automagically find the classes and add in it one (fake) property and three methods described below:
+Doing this, the plugin will automagically find the classes and add it one (fake) property and three methods described 
+below:
 
 
 
 * Method 'feature'
 
-You'll use this to feature your domain class. Just call this method with the time you want this item to be featured. If you do not specify it, the plugin will assume 1 month (30 days) by default. The plugin adds 3 properties to the Integer class to make your life easier, so you can use it to tell how much time this object will be featured. If you want to define the exact date it expires, you can pass a java.util.Date argument to it.
+Use this method to feature your domain class. Just call this method and pass the length of time you want the item to 
+be featured for. By default, the method will assume 30 days. The plugin adds 3 properties to the Integer 
+class to make your life easier when trying to define how much time to feature the item for. You can also define the exact
+date to expire the item by passing a java.util.Date argument to it.
 
 def b = new Book(author:"Lucas", isbn:"123123")
 b.save()
@@ -43,18 +49,21 @@ b.feature(10.years) //hope to be alive to see it
 
 * Method 'unfeature'
 
-The opposite of it, will unfeature a previously featured object. 
+Essentially the opposite method for 'feature'. It  will unfeature a previously featured object. 
 
 def b = Book.get(1)
 b.unfeature() //Ok, now it is unfeatured
 
-This method will return true if the item got unfeatured and false when the item was not even featured before calling it.
+This method will return true if the item was unfeatured and false if the item was already unfeatured.
+
 
 
 
 * Static method 'findFeatured'
 
-Use this method to find featured items. By default (without any parameters) this method will return the items featured till 30 days from now. You can give any java.util.Date as a parameter to tell till when you want the objects.
+Use this method to find featured items. If you do not pass any parameters, this method will return all items that
+are featured within the next 30 days. You can also pass a java.util.Date as a parameter to return objects that are
+featured within a specific time frame.
 
 //default usage
 def oneMonthFeaturedBooks = Book.findFeatured()
@@ -62,13 +71,14 @@ def oneMonthFeaturedBooks = Book.findFeatured()
 //featured items for the next year
 def c = Calendar.instance
 c.add Calendar.YEAR, 1
-def featuredTillNextYear = Book.find(c.time)
+def featuredTillNextYear = Book.findFeatured(c.time)
 
 
 
 * 'featured' property
 
-The plugins also adds a 'featured' property to the domain class that will return true/false according to featured status of this object. Use this with wisdom cause it will query the database every time it is called.
+The plugin also adds a 'featured' property to the domain class that will return true/false according to featured status 
+of the object. Use this wisely, as it will query the database every time it is called.
 
 def book = Book.get(1)
 def isItFeatured = book.featured
