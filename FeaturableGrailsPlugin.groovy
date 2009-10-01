@@ -34,18 +34,14 @@ class FeaturableGrailsPlugin {
 		println "Adding integer properties"
 		Integer.metaClass.propertyMissing = { name ->
 			
-			switch (name) {
-				case "day": 
-					return DateRangeCreator.fromDays(delegate)
-					break;
-				case "month": 
-					return DateRangeCreator.fromMonths(delegate)
-					break;
-				case "year":
-					return DateRangeCreator.fromYears(delegate)
-					break;
-				default:
-					throw new MissingPropertyException(delegate)
+			if (name.startsWith("day")) {
+				return DateRangeCreator.fromDays(delegate)
+			} else if (name.startsWith("month")) {
+				return DateRangeCreator.fromMonths(delegate)
+			} else if (name.startsWith("year")) {
+				return DateRangeCreator.fromYears(delegate)
+			} else {
+				throw new MissingPropertyException(delegate)
 			}
 		}
 	
@@ -58,9 +54,7 @@ class FeaturableGrailsPlugin {
 					currentClass.metaClass.feature = { expiresAt ->
 						
 						if (!expiresAt) {
-							def c = CAL.instance
-							c.add CAL.DAY_OF_MONTH, 30
-							expiresAt = c.time
+							expiresAt = 30.days
 						}
 						
 						def featured = new Featured(className: currentClass.name, delegateId: delegate.id, expiresAt: expiresAt)

@@ -62,28 +62,31 @@ class FeaturedTests extends GroovyTestCase {
 		book.title = "Mastering Guitar Hero 3"
 		book.isbn = "123456789-40"
 		assert book.save()
-		assertTrue book.feature()
+		assertTrue book.feature(1.year)
 		
 		//Insert the book in the database
 		def book2 = new Book()
 		book2.title = "PS3 for dummies"
 		book2.isbn = "111222333-99"
 		assert book2.save()
-		assertTrue book2.feature()
+		assertTrue book2.feature(2.years)
 		
 		def book3 = new Book()
 		book3.title = "Definitive Guide to Grails"
 		book3.isbn = "177648190-11"
 		assert book3.save()
-		assertTrue book3.feature()
+		assertTrue book3.feature(3.days)
 		
 		def featuredBooks = Book.findFeatured()
 		assertEquals "3 featured items", featuredBooks.size(), 3
 		
-		book3.unfeature()
+		book2.unfeature()
 		
 		featuredBooks = Book.findFeatured()
 		assertEquals "2 featured items", featuredBooks.size(), 2
+		
+		featuredBooks = Book.findFeatured(1.month)
+		assertEquals "just one featured item for next month", featuredBooks.size(), 1
 	}
 	
 	

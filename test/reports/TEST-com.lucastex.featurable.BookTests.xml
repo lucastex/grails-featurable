@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="scofield.local" name="com.lucastex.featurable.BookTests" tests="2" time="0.087" timestamp="2009-09-30T01:05:33">
+<testsuite errors="0" failures="0" hostname="scofield.local" name="com.lucastex.featurable.BookTests" tests="2" time="0.055" timestamp="2009-09-30T23:59:22">
   <properties />
   <testcase classname="com.lucastex.featurable.BookTests" name="testStaticPropertyExistance" time="0.0020" />
   <testcase classname="com.lucastex.featurable.BookTests" name="testStaticPropertyValue" time="0.0" />

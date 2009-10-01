@@ -51,8 +51,8 @@
 <tr valign="top">
 <th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
 </tr>
-<tr valign="top" class="Pass">
-<td><a title="Display all tests" href="2_FeaturedTests.html">FeaturedTests</a></td><td><a title="Display all tests" href="2_FeaturedTests.html">4</a></td><td>0</td><td>0</td><td>1.047</td><td>2009-09-30T01:05:33</td><td>scofield.local</td>
+<tr valign="top" class="Failure">
+<td><a title="Display all tests" href="2_FeaturedTests.html">FeaturedTests</a></td><td><a title="Display all tests" href="2_FeaturedTests.html">4</a></td><td>0</td><td><a title="Display only failures" href="2_FeaturedTests-fails.html">1</a></td><td>0.877</td><td>2009-09-30T23:59:22</td><td>scofield.local</td>
 </tr>
 </table>
 <h2>Tests</h2>
@@ -61,16 +61,18 @@
 <th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testFeature"></a>testFeature</td><td>Success</td><td></td><td>0.827</td>
+<td><a name="testFeature"></a>testFeature</td><td>Success</td><td></td><td>0.736</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testUnfeature"></a>testUnfeature</td><td>Success</td><td></td><td>0.105</td>
+<td><a name="testUnfeature"></a>testUnfeature</td><td>Success</td><td></td><td>0.071</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testFeaturedProperty"></a>testFeaturedProperty</td><td>Success</td><td></td><td>0.009</td>
+<td><a name="testFeaturedProperty"></a>testFeaturedProperty</td><td>Success</td><td></td><td>0.008</td>
 </tr>
-<tr valign="top" class="TableRowColor">
-<td><a name="testListFeatured"></a>testListFeatured</td><td>Success</td><td></td><td>0.081</td>
+<tr valign="top" class="Failure">
+<td><a name="testListFeatured"></a>testListFeatured</td><td>Failure</td><td>3 featured items expected:&lt;1&gt; but was:&lt;3&gt;<br>
+<br>
+<code>junit.framework.AssertionFailedError: 3 featured items expected:<1> but was:<3><br/>	at junit.framework.Assert$assertEquals.callCurrent(Unknown Source)<br/>	at com.lucastex.featurable.FeaturedTests.testListFeatured(FeaturedTests.groovy:81)<br/>	at _GrailsTest_groovy$_run_closure4.doCall(_GrailsTest_groovy:203)<br/>	at _GrailsTest_groovy$_run_closure4.call(_GrailsTest_groovy)<br/>	at _GrailsTest_groovy$_run_closure2.doCall(_GrailsTest_groovy:147)<br/>	at _GrailsTest_groovy$_run_closure1_closure19.doCall(_GrailsTest_groovy:113)<br/>	at _GrailsTest_groovy$_run_closure1.doCall(_GrailsTest_groovy:96)<br/>	at TestApp$_run_closure1.doCall(TestApp.groovy:66)<br/>	at gant.Gant$_dispatch_closure4.doCall(Gant.groovy:324)<br/>	at gant.Gant$_dispatch_closure6.doCall(Gant.groovy:334)<br/>	at gant.Gant$_dispatch_closure6.doCall(Gant.groovy)<br/>	at gant.Gant.withBuildListeners(Gant.groovy:344)<br/>	at gant.Gant.this$2$withBuildListeners(Gant.groovy)<br/>	at gant.Gant$this$2$withBuildListeners.callCurrent(Unknown Source)<br/>	at gant.Gant.dispatch(Gant.groovy:334)<br/>	at gant.Gant.this$2$dispatch(Gant.groovy)<br/>	at gant.Gant.invokeMethod(Gant.groovy)<br/>	at gant.Gant.processTargets(Gant.groovy:495)<br/>	at gant.Gant.processTargets(Gant.groovy:480)<br/></code></td><td>0.047</td>
 </tr>
 </table>
 <div class="Properties">

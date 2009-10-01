@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="scofield.local" name="com.lucastex.featurable.DateRangeCreatorTests" tests="3" time="0.053" timestamp="2009-09-30T01:05:33">
+<testsuite errors="0" failures="0" hostname="scofield.local" name="com.lucastex.featurable.DateRangeCreatorTests" tests="3" time="0.026" timestamp="2009-09-30T23:59:22">
   <properties />
-  <testcase classname="com.lucastex.featurable.DateRangeCreatorTests" name="testDays" time="0.044" />
+  <testcase classname="com.lucastex.featurable.DateRangeCreatorTests" name="testDays" time="0.019" />
   <testcase classname="com.lucastex.featurable.DateRangeCreatorTests" name="testMonths" time="0.0010" />
   <testcase classname="com.lucastex.featurable.DateRangeCreatorTests" name="testYears" time="0.0010" />
   <system-out><![CDATA[--Output from testDays--

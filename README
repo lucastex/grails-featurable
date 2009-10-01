@@ -41,10 +41,14 @@ b.save()
 
 b.feature() //this will mark your book featured for 30 days
 
+b.feature(1.day) //just one day
 b.feature(5.days) //for 5 days
-b.feature(3.months) //3 months
-b.feature(10.years) //hope to be alive to see it
 
+b.feature(1.month) //just one month
+b.feature(3.months) //3 months
+
+b.feature(1.year) //just one year
+b.feature(10.years) //hope to be alive to see it
 
 
 * Method 'unfeature'
@@ -65,14 +69,14 @@ Use this method to find featured items. If you do not pass any parameters, this 
 are featured within the next 30 days. You can also pass a java.util.Date as a parameter to return objects that are
 featured within a specific time frame.
 
-//default usage
+//default usage, one month
 def oneMonthFeaturedBooks = Book.findFeatured()
 
 //featured items for the next year
-def c = Calendar.instance
-c.add Calendar.YEAR, 1
-def featuredTillNextYear = Book.findFeatured(c.time)
+def featuredTillNextYear = Book.findFeatured(1.year)
 
+//featured items for just two weeks
+def featuredTillNextYear = Book.findFeatured(2.weeks)
 
 
 * 'featured' property
@@ -86,13 +90,3 @@ def isItFeatured = book.featured
 
 Plugin stats
 ------------------
-
-+----------------------+-------+-------+
-| Name                 | Files |  LOC  |
-+----------------------+-------+-------+
-| Domain Classes       |     2 |    23 | 
-| Groovy Helpers       |     1 |    20 | 
-| Integration Tests    |     3 |    91 | 
-+----------------------+-------+-------+
-| Totals               |     6 |   134 | 
-+----------------------+-------+-------+
